@@ -15,9 +15,9 @@ public class AutomateElements {
 	public static void main(String[] args) throws InterruptedException {
 		
 		
-		System.setProperty("webdriver.chrome.driver", "C:\\Automation Workspace\\Softwares\\chromedriver_win32\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\drivers\\chromedriver\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
-		WebDriverWait wait = new WebDriverWait(driver, 20);
+	//	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		
 		driver.manage().window().maximize();
@@ -27,10 +27,14 @@ public class AutomateElements {
 		
 		js.executeScript("arguments[0].scrollIntoView(true)", gender_female);
 		Thread.sleep(3000);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@name='gender' and @value='female']")));
+//		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@name='gender' and @value='female']")));
 		gender_female.click();
 		System.out.println("female clicked..!");
+		method();
 		
+	}
+	static  void method() {
+		System.out.println("Print..!");
 	}
 
 }

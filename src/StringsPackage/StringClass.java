@@ -43,7 +43,7 @@ public class StringClass {
 		//StringBuffer
 		
 		StringBuffer sbuff = new StringBuffer("Kumar Kranthi");
-	//	System.out.println("reverse:"+sbuff.reverse());
+		System.out.println("reverse:"+sbuff.reverse());
 		System.out.println("indexOf:"+sbuff.indexOf("u"));
 		System.out.println("sf substring:"+sbuff.substring(2));
 		

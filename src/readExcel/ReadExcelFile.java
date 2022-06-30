@@ -24,7 +24,7 @@ public class ReadExcelFile extends ExcelFileConfig {
 
 			for (int j = 0; j < row.getLastCellNum(); j++) {
 
-				String cellData = readxl.fetchData(sheetName, row.getRowNum(), j);
+				String cellData = fetchData(sheetName, row.getRowNum(), j);
 				System.out.println(cellData);
 			}
 		}

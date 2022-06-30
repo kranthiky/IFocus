@@ -29,7 +29,7 @@ public class FBloginWithUsersFromExcel extends TestDataProviders {
 	@Test(priority=1,dataProvider = "Read from Excel") 
 	public void loginToFB(String userName, String passWord) throws InterruptedException {
 
-		provider = new FBloginWithUsersFromExcel();
+	//	provider = new FBloginWithUsersFromExcel();
 		WebElement uName = driver.findElement(By.id("email"));
 		WebElement pWord = driver.findElement(By.id("pass"));
 		WebElement loginButton = driver.findElement(By.xpath("//button[contains(@id,'u_0')]"));

@@ -17,7 +17,7 @@ public class ExcelFileConfig {
 			File file = new File(excelLoc);
 			FileInputStream ip = new FileInputStream(file);
 			wb = new XSSFWorkbook(ip);
-			sheet = wb.getSheet(sheetName);
+		//	sheet = wb.getSheet(sheetName);
 
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
@@ -26,7 +26,13 @@ public class ExcelFileConfig {
 	}
 
 	public String fetchData(String sheetName, int row, int cell) {
+		sheet = wb.getSheet(sheetName);
+		String data = sheet.getRow(row).getCell(cell).getStringCellValue();
+		return data;
 
+	}
+	public String fetchData(int index, int row, int cell) {
+		sheet = wb.getSheetAt(index);
 		String data = sheet.getRow(row).getCell(cell).getStringCellValue();
 		return data;
 

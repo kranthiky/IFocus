@@ -1,5 +1,7 @@
 package calendar;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,9 +17,9 @@ public class selectCalendar {
 	public String orangeURL="https://opensource-demo.orangehrmlive.com";
 	@Test
 	public void selectDate() throws InterruptedException {
-	System.setProperty("webdriver.chrome.driver", "C:\\Automation Workspace\\Softwares\\chromedriver_win32\\chromedriver.exe");
+	System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\drivers\\chromedriver\\chromedriver.exe");
 	WebDriver driver = new ChromeDriver();
-	WebDriverWait wait = new WebDriverWait(driver, 20);
+	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	driver.manage().window().maximize();
 	
 	driver.get(orangeURL);

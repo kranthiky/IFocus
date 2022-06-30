@@ -22,7 +22,7 @@ public class Assertions2 {
 	
 	@BeforeClass
 	public void launchAppl() {
-		System.setProperty("webdriver.chrome.driver", "C:\\Automation Workspace\\Softwares\\chromedriver_win32\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\drivers\\chromedriver\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.facebook.com/reg/");
@@ -44,10 +44,10 @@ public class Assertions2 {
 		
 		//softAssertion
 		SoftAssert softAsrt = new SoftAssert();
-		softAsrt.assertEquals(monthList.size(), 14,"Month count does not match - Raise a bug");
+		softAsrt.assertEquals(monthCount, 14,"Month count does not match - Raise a bug");
 		System.out.println("Months in the DD are:");
-		for(WebElement months: monthList) {
-		     System.out.println(months.getText());
+		for(WebElement month: monthList) {
+		     System.out.println(month.getText());
 		}
 		softAsrt.assertAll();
 	}

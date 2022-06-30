@@ -34,19 +34,19 @@ public class TestClass extends MyBase {
 	}
 	@Test(priority =2, enabled=true)
 	public void logoutFromOrange() throws InterruptedException {
-		WebElement logOutDropdown = driver.findElement(By.xpath("//a[text()='Welcome osama']"));
+		WebElement logOutDropdown = driver.findElement(By.id("welcome"));
 		WebElement logoutLink = driver.findElement(By.xpath("//a[text()='Logout']"));
 		
 		logOutDropdown.click();
 		Thread.sleep(2000);
-	//	logoutLink.click();
+		logoutLink.click();
 		Thread.sleep(2000);
 		Assert.assertEquals(driver.getCurrentUrl(), "https://opensource-demo.orangehrmlive.com/index.php/auth/login");
 	}
 	@AfterClass
 	public void tearDown() {
-		driver.close();
-		driver.quit();
+	//	driver.close();
+	//	driver.quit();
 	}
 	
 }

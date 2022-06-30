@@ -3,19 +3,33 @@
   <groupId>Learning</groupId>
   <artifactId>IFocus</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  
  <dependencies>
-    <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
-  <dependency>
+  
+<dependency>
     <groupId>org.seleniumhq.selenium</groupId>
     <artifactId>selenium-java</artifactId>
-    <version>4.0.0-rc-1</version>
-   </dependency>
+    <version>4.1.2</version>
+</dependency>
+
 
    <dependency>
-    <groupId>io.github.bonigarcia</groupId>
-    <artifactId>webdrivermanager</artifactId>
-    <version>5.0.1</version>
-    </dependency>
-
-  </dependencies>
+     <groupId>io.github.bonigarcia</groupId>
+     <artifactId>webdrivermanager</artifactId>
+     <version>5.0.1</version>
+   </dependency>
+	
+   <dependency>
+    <groupId>com.aventstack</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>5.0.9</version>
+   </dependency>
+	
+	<dependency>
+	 <groupId>org.apache.poi</groupId>
+	 <artifactId>poi</artifactId>
+     <version>5.0.0</version>
+     </dependency>
+   
+ </dependencies>
 </project>

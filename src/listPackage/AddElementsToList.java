@@ -13,10 +13,10 @@ public class AddElementsToList {
 	@Test
 	public void AddToList() {
 	//Add elements to ArrayList
-			List<String> cars = new ArrayList<>();
+			List<String> cars = new ArrayList<String>();
 			Collections.addAll(cars, "Benz","Suzuki","Hyundai");
 			
-			List<String> cycles = new ArrayList<>();
+			List<String> cycles = new ArrayList<String>();
 			Collections.addAll(cycles,"Hero", "TVS");
 			
 			cars.addAll(2,cycles);
@@ -26,12 +26,12 @@ public class AddElementsToList {
 			//display ArrayList
 			System.out.println("Before sort:"+ cars);
 			
-		//	Collections.sort(cars);
-			cars.sort(Comparator.naturalOrder());		
+			Collections.sort(cars);
+		//	cars.sort(Comparator.naturalOrder());		
 			System.out.println("sorted:"+cars);
 			
-		//	Collections.reverse(cars);
-			cars.sort(Comparator.reverseOrder());
+			Collections.reverse(cars);
+		//	cars.sort(Comparator.reverseOrder());
 			System.out.println("Reverse sorted:"+cars);
 			
 			//iterate

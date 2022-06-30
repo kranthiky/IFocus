@@ -13,7 +13,7 @@ public class NonSelectDD {
 
 	@Test
 	public void nonSelectTag() throws InterruptedException {
-		System.setProperty("webdriver.chrome.driver", "C:\\Automation Workspace\\Softwares\\chromedriver_win32\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\drivers\\chromedriver\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://getbootstrap.com/docs/4.0/components/dropdowns/");

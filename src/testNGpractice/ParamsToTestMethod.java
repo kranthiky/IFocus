@@ -19,7 +19,9 @@ import org.testng.annotations.Test;
 public class ParamsToTestMethod {
 
 	public WebDriver driver;
-//	public String URL ="https://www.facebook.com";
+	//public String URL ="https://www.facebook.com";
+	//public String userName = "dummy@fb.com";
+	//public String password = "dummy123";
 	
 	@BeforeSuite
 	public void bforeSuit() {

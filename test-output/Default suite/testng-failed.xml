@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="listenersTestNG.TestClass">
+      <class name="alerts_windowHandles_frames.FramesClass">
         <methods>
-          <include name="setupBrowser"/>
-          <include name="logoutFromOrange"/>
-          <include name="tearDown"/>
+          <include name="testFrames"/>
         </methods>
-      </class> <!-- listenersTestNG.TestClass -->
+      </class> <!-- alerts_windowHandles_frames.FramesClass -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
